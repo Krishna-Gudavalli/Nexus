@@ -1,0 +1,2 @@
+import { NextResponse } from "next/server"; import { z } from "zod"; import { scanText,scoreFindings } from "@/lib/security";
+const schema=z.object({source:z.string().min(1).max(100000),file:z.string().default("input.ts")});export async function POST(req:Request){const b=schema.parse(await req.json());const findings=scanText(b.source,b.file);return NextResponse.json({score:scoreFindings(findings),findings})}

@@ -1,0 +1,1 @@
+NEXUS component assets are intentionally kept in source form.
