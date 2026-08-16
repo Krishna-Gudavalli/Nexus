@@ -1,4 +1,4 @@
-# 🚀 NEXUS 3.2.4 — Autonomous AI Security & Engineering Platform
+# 🚀 NEXUS — Autonomous AI Security & Engineering Platform
 
 > **A provider-neutral AI agent operating system for software engineering, security analysis, guarded remediation, validation, and GitHub pull-request automation.**
 
